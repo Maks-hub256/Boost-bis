@@ -1047,7 +1047,15 @@ header {
   line-height: 24.99px;
   padding-right: 12px;
 }
-.news_social i:hover {
+.news_social i:hover, .news_social i:focus {
+  color: #ffc155;
+}
+
+.news_social a:focus {
+  outline: none;
+}
+
+.news_social a:focus > i {
   color: #ffc155;
 }
 
