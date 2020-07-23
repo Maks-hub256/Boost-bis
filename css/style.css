@@ -82,6 +82,10 @@ body {
   background-color: #ffbb42;
 }
 
+.pre-header__burger-area {
+  display: none;
+}
+
 header {
   width: 100%;
   min-height: 589px;
