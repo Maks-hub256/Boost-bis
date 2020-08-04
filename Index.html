@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="/img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/tablet.css">
     <script src="https://kit.fontawesome.com/9e9295c51f.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Boost Bis</title>
 </head>
 <body>
@@ -21,13 +23,13 @@
                     
                 </div>
                 <ul class="pre-header__navbar">
-                    <li class="pre-header__item"><a href="#Home" class="pre-header__link" >Home</a></li>
-                    <li class="pre-header__item"><a href="#services" class="pre-header__link">Service</a></li>
-                    <li class="pre-header__item"><a href="#aboutUs" class="pre-header__link">About us</a></li>
-                    <li class="pre-header__item"><a href="#price" class="pre-header__link">Pricing Table</a></li>
-                    <li class="pre-header__item"><a href="#howItWorks" class="pre-header__link" >How it work</a></li>
-                    <li class="pre-header__item"><a href="#clients" class="pre-header__link" >Happy Clients</a></li>
-                    <li class="pre-header__item"><a href="#contacts" class="pre-header__link">Contact Us</a></li>
+                    <li class="pre-header__item"><a href="#Home" class="pre-header__link" onclick="burgerActive(this)" >Home</a></li>
+                    <li class="pre-header__item"><a href="#services" class="pre-header__link" onclick="burgerActive(this)">Service</a></li>
+                    <li class="pre-header__item"><a href="#aboutUs" class="pre-header__link" onclick="burgerActive(this)">About us</a></li>
+                    <li class="pre-header__item"><a href="#price" class="pre-header__link" onclick="burgerActive(this)">Pricing Table</a></li>
+                    <li class="pre-header__item"><a href="#howItWorks" class="pre-header__link" onclick="burgerActive(this)">How it work</a></li>
+                    <li class="pre-header__item"><a href="#clients" class="pre-header__link" onclick="burgerActive(this)">Happy Clients</a></li>
+                    <li class="pre-header__item"><a href="#contacts" class="pre-header__link" onclick="burgerActive(this)">Contact Us</a></li>
                 </ul>
                 <div class="pre-header__burger-area">
                     <button class="pre-header__burger" onclick="burgerActive(this)">
@@ -178,8 +180,8 @@
             <p class="price__sub-title">Lorem Ipsum is simply dummy text of the printing typesetting.</p>
         </div>
         <div class="price__section-space">
-            <section class="price__item">
-                <div class="price__content">
+            <section class="price__item" >
+                <div class="price__content" >
                     <h3 class="price__plan">Basic plan</h3>
                     <h4 class="price__sell"><sup>$</sup>22</h4>
                     <p class="price__per-month">per month</p>
@@ -209,6 +211,10 @@
             </div></section>
         </div>
        </div>
+
+       <!--HowItWorks-->
+
+
        <div class="how-it-works"id="howItWorks">
            <div class="how-it-works__space" >
                 <div class="how-it-works__title-space">
@@ -220,19 +226,16 @@
                         <div class="how-it-works__img"></div>
                         <h4 class="how-it-works__item">Step 1</h4>
                         <p class="how-it-works__sub-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                        <div class="how-it-works__down-arrow"></div>
                     </div>
                     <div class="how-it-works__section">
                         <div class="how-it-works__img lock"></div>
                         <h4 class="how-it-works__item">Step 2</h4>
                         <p class="how-it-works__sub-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                        <div class="how-it-works__up-arrow"></div>
                     </div>
                     <div class="how-it-works__section">
                         <div class="how-it-works__img cloud"></div>
                         <h4 class="how-it-works__item">Step 3</h4>
                         <p class="how-it-works__sub-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                        <div class="how-it-works__down-arrow"></div>
                     </div>
                     <div class="how-it-works__section">
                         <div class="how-it-works__img like"></div>
@@ -255,7 +258,7 @@
                    <p class="client__sub-title">  We are explain who is using our business solutions</p>
                </div>
                <div class="client__content-space">
-                   <section class="client__item">
+                   <section class="client__item" >
                         <div class="client__img-area">
                             <img src="img/darlin.png" class="client__img">
                         </div>
@@ -267,7 +270,7 @@
                            <p class="client__name"><name class="name">Darwin Michle</name>, Project manager</p>
                         </div>
                     </section>
-                    <section class="client__item">
+                    <section class="client__item" >
                         <div class="client__img-area">
                             <img src="img/madam.png" class="client__img">
                         </div>
@@ -290,7 +293,7 @@
                            <p class="client__name"><name class="name">Clips arter</name>, Lipsum directer</p>
                        </div>
                     </section>
-                   <section class="client__item">
+                   <section class="client__item" >
                         <div class="client__img-area">
                             <img src="img/zam.png" class="client__img">
                         </div>
@@ -383,6 +386,7 @@
             function burgerActive(){
                 active.classList.toggle('active-burger')
             }
+            AOS.init();
         </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
