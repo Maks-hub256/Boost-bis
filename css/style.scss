@@ -69,6 +69,7 @@ body{
     padding: 12px 21px;
     transition: 0.3s;
     text-transform: uppercase;
+    word-wrap: unset;
     &:hover{
         color: $white;
         background-color: $navbar-back-hover-color ;
@@ -150,6 +151,7 @@ header{
     font-size: 15px;
     font-weight: 400;
     padding: 10px;
+    
     margin-right: 5px;
     padding-left: 30px;
     &::placeholder{
@@ -887,10 +889,11 @@ header{
 .news__map{
     background-image: url(../img/map.png);
     background-repeat: no-repeat;
-    margin: 0 auto;
     height: 549px;
     margin-top: 53px;
     position: relative;
+    width: 100%;
+    background-position:center;
 }
 .news__address-title{
     text-align: center;
@@ -1060,7 +1063,7 @@ header{
 // media
 
 //tablet
-@media (max-width:1023px)  {
+@media screen and (max-width:1023px)  {
     *{
         z-index: 1;
     }
@@ -1119,7 +1122,7 @@ header{
         transition: 0.2s;
     }
     .pre-header__link:hover{
-        color: #fff;
+        color: #ffaf;
         background-color: #394b50;
 
     }
@@ -1284,5 +1287,211 @@ header{
     }
     .submit{
         width: 190px;
+    }
+}
+
+//phone
+
+@media screen and (max-width: 768px) {
+    //header
+    .header{
+        height: 700px;
+    }
+    .header__title-space{
+        width: 100%;
+    }
+    .header__title{
+        font-size: 25px;
+        padding: 5px;
+    }
+    .header__sub-title{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    @media screen and (max-width:402px){
+        .header__sub-title{
+            margin-top: 20px;
+        }
+    }
+    .header__form-space{
+        width: 100%;
+        height: 300px;
+    }
+    .header__form{
+        flex-direction: column;
+    }
+    .header__item-area{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .header__form-item{
+        width: 310px;
+        margin-right: 0;
+    }
+    .header__button-submit{
+        width: 200px;
+    }
+    .header__laptop{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/laptop-small.png);
+        width: 100%;
+        margin: 0;
+        height: 250px;
+        position: static;  
+    }
+    .header__screen{
+        width: 285px;
+        position:relative;
+        height: 120px;
+        margin: 0 auto;
+        top: 27px;
+        left: 0;
+    }
+    .button-positioning{
+        top: 217px;
+    }
+
+    //service
+
+    .service__main-title{
+        font-size: 25px;
+    }
+    .service__sub-title{
+        font-size: 12px;
+    }
+    .service__artical-space{
+        display: flex;
+        flex-direction: column;
+    }
+    .service__item{
+        margin-bottom: 20px;
+        height: inherit;
+    }
+    .service__img{
+        padding-right: 40px;
+    }
+
+    //about
+
+    .about{
+        display: grid;
+        grid-template-columns: inherit;
+        grid-template-rows: 1.5fr 1fr;
+    }
+    .about__about-us{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    
+    //price
+
+
+    .price{
+        height: inherit;
+    }
+    .price__section-space{
+        grid-template-columns: inherit;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: inherit;
+    }
+    .price__item{
+        transition: inherit;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            border: 1px solid #ccd5df;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 15px;
+        }
+        &:hover{
+            background-color: #fff;
+            height: 439px;
+        }
+        &:hover .price__plan{
+            color: #818b95;
+        }
+        &:hover .price__sell, sup{
+            color: #ffbb42;
+        }
+        &:hover sup{
+            color: #ffbb42;
+        }
+        &:hover .price__per-month{
+            color: #818b95;
+        }
+        &:hover .price__awards{
+            color: #b5bbc1;
+            border-top: 1px solid #e2e9f0;
+        }
+    }
+    
+
+    //how-ti-works
+
+
+    .how-it-works__main-title{
+        margin-top: 30px;
+    }
+    .how-it-works__section-space{
+        grid-template-columns: inherit;
+        justify-content: center;
+    }
+    .how-it-works__section{
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+    }
+    .how-it-works__get-start{
+        margin-bottom: 40px;
+        margin-top: 25px;
+    }
+
+    //clients
+
+    .clients{
+        height: inherit;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .clients__area{
+        height: inherit;
+    }
+    .client__content-space{
+        grid-template-columns: inherit;
+    }
+
+    //news
+
+
+    .news__form{
+        flex-direction: column;
+    }
+    .news__item-area{
+        margin-bottom: 15px;
+    }
+    .news__title-space{
+        margin-top: 40px;
+    }
+    .news__form-item{
+        width: 310px ;
+    }
+    .email-item{
+        width: 310px;
+    }
+    .news__contacts{
+        margin-top: 10px;
+    }
+    .bottom-line{
+        margin-bottom: 10px;
+    }
+
+    //footer
+
+    .footer__copyright{
+        font-size: 10px;
+        line-height: 18px;
+        text-align: center;
     }
 }
