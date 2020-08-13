@@ -2,12 +2,16 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
